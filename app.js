@@ -59,3 +59,38 @@ const myKey = prompt(
   "Araba ile ilgili neyi ogrenmek isteriniz: speed, color,engine..."
 );
 alert(car[myKey]);
+
+const myCar = new Object();
+myCar.brand = "Mercedes";
+myCar.model = 2022;
+myCar.speed = 7;
+
+console.log(myCar.speed);
+console.log(myCar["model"]);
+
+console.log(myCar);
+
+function Personel(id, name, age, salary) {
+  this.id = id;
+  this.name = name;
+  this.age = age;
+  this.salary = salary;
+}
+
+const person1 = new Personel("1234567890", "Ahmet Can", 33, 30000);
+const person2 = new Personel("123456745454", "Mehmet Veli", 23, 10000);
+
+const personel = {
+  name: "Ahmet",
+  surname: "Canan",
+  dob: 1990,
+  salary: 30000,
+  drivingLicense: true,
+  calculateAge: function () {
+    return new Date().getFullYear() - this.dob;
+  },
+};
+
+console.log(personel.name + " " + personel.surname);
+
+console.log("AGE:", personel.calculateAge());
