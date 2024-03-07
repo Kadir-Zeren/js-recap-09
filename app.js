@@ -55,10 +55,10 @@ console.log(car);
 
 console.log("ENGINE:", car["engine"]);
 
-const myKey = prompt(
-  "Araba ile ilgili neyi ogrenmek isteriniz: speed, color,engine..."
-);
-alert(car[myKey]);
+// const myKey = prompt(
+//   "Araba ile ilgili neyi ogrenmek isteriniz: speed, color,engine..."
+// );
+// alert(car[myKey]);
 
 const myCar = new Object();
 myCar.brand = "Mercedes";
@@ -94,3 +94,49 @@ const personel = {
 console.log(personel.name + " " + personel.surname);
 
 console.log("AGE:", personel.calculateAge());
+
+const team = [
+  {
+    name: "Ahmet",
+    surname: "Can",
+    job: "Developer",
+    age: 30,
+  },
+  {
+    name: "Mary",
+    surname: "Bary",
+    job: "tester",
+    age: 22,
+  },
+  {
+    name: "Hazel",
+    surname: "Nut",
+    job: "Developer",
+    age: 20,
+  },
+];
+
+console.log(team);
+console.log(team[1]);
+console.log(team[1].name);
+console.log(team[2].age);
+
+team.forEach((p) => console.log(p.job));
+
+const personelAges = team.map((person) => person.age + 1);
+console.log(personelAges);
+
+const teamFullName = team.map((p) => {
+  return {
+    fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+    age: p.age + 5,
+  };
+});
+
+const teamFullName1 = team.map((p) => ({
+  fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+  age: p.age + 5,
+}));
+
+console.log(teamFullName);
+console.log(teamFullName1);
